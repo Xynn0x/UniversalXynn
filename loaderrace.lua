@@ -1,7 +1,10 @@
-local allowedPlaceId = 105742951729183
+repeat task.wait() until game:IsLoaded()
 
-if game.PlaceId ~= allowedPlaceId then
-    warn("Script tidak diizinkan di game ini!")
+local place = game.PlaceId
+print("Loaded PlaceId:", place)
+
+if place ~= 105742951729183 then
+    warn("Wrong place:", place)
     return
 end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Xynn0x/RaceLuckyXynn/refs/heads/main/RaceYourLuckyBlock.lua"))()
